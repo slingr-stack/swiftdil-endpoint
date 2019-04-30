@@ -1,0 +1,86 @@
+{
+    "label": "SwiftDil",
+    "name": "swiftdil",
+    "apiVersion": "v1",
+    "internal": false,
+    "configurationType": "GLOBAL",
+    "deployment": {
+        "profiles":[
+            {
+                "name": "default",
+                "label": "Default",
+                "memory": 256,
+                "description": "Default configuration"
+            }
+        ],
+        "allowMultipleInstances": true
+    },
+    "icon48": "https://storage.googleapis.com/static.slingrs.io/platform/endpoints/swiftdil.png",
+    "configurationHelpUrl": "/endpoints_swiftdil.html#configuration",
+    "status": "ACTIVE",
+    "stores": [],
+    "events": [],
+    "functions": [
+        {
+            "label": "GET",
+            "name": "_get"
+        },
+        {
+            "label": "POST",
+            "name": "_post"
+        },
+        {
+            "label": "PUT",
+            "name": "_put"
+        },
+        {
+            "label": "PATCH",
+            "name": "_patch"
+        },
+        {
+            "label": "DELETE",
+            "name": "_delete"
+        },
+        {
+            "label": "Encode File",
+            "name": "_encodeFile"
+        }
+    ],
+    "scripts":[
+        "functions.js"
+    ],
+    "configuration":[
+        {
+            "name": "clientId",
+            "label": "Client ID",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "clientKey",
+            "label": "Client Key",
+            "type": "text",
+            "required": true
+        },
+        {
+            "name": "sandboxMode",
+            "label": "Sandbox mode",
+            "type": "buttonsGroup",
+            "required": true,
+            "defaultValue": "yes",
+            "typeOptions": {
+                "allowCustom": true,
+                "possibleValues":[
+                    {
+                        "label":"Yes",
+                        "name":"yes"
+                    },
+                    {
+                        "label":"No",
+                        "name":"no"
+                    }
+                ]
+            }
+        }
+    ]
+}
